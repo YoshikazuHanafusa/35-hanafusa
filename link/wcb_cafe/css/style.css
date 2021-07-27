@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+
+/*------共通部分------*/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', 'ヒラギノ角ゴ Pro W3', san-serif;
+  line-height: 1.7;
+  color: #432;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* ↓%で余白設定することで、1100以下でも左右に4%の余白を確保できる */
+  padding: 0 4%;
+}
+
+/*見出し*/
+.page-title {
+  font-size: 5rem;
+  font-family: 'Philosopher', sans-serif;
+  text-transform: uppercase;
+  /* ↓　h2で括っているので、文字が太字になっている為、下記で太字を通常の太さに戻す */
+  font-weight: normal;
+}
+
+/*ボタン*/
+
+.button {
+  font-size: 1.375rem;
+  background: #0bd;
+  color: #f8f8f8;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.button:hover {
+  background: #0090aa;
+}
+
+/*背景画像の設定*/
+
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/*------header------*/
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.logo {
+  width: 210px;
+  margin-top: 14px;
+}
+
+.main-nav {
+  display: flex;
+  list-style-type: none;
+  font-size: 1.5rem;
+  margin-top: 34px;
+  text-transform: uppercase;
+  /* ↑アルファベットを全て大文字にする属性。lowercase?で小文字に */
+}
+
+.main-nav li {
+  margin-left: 36px;
+}
+
+.main-nav li a {
+  color: #432;
+}
+
+.main-nav li a:hover {
+  color: #0bd;
+}
+
+.sub-title {
+  font-size: 1.375rem;
+  border-bottom: 2px solid #0bd;
+  padding: 0 8px 8px 8px;
+  font-weight: normal;
+}
+
+
+
+/*footer-ここから--------------------------------------+*/
+footer {
+  background-color: #432;
+  text-align: center;
+  padding: 26px 0;
+}
+
+footer p {
+  font-size: 0.875rem;
+  color: #f8f8f8;
+}
+
+
+
+/*footer-ここまで--------------------------------------+*/
+
+
+/*home content*------------------------------------/*/
+
+#home {
+  background-image: url("../images/main-bg.jpg");
+  min-height: 100vh;
+}
+
+/* ↑これで高さが足りないときも調整してくれる */
+
+/*背景画像のカスタマイズ例
+/*
+#home {
+  background-image: url(../images/main-bg.jpg), linear-gradient(45deg,#c9ffbf 30%, #ffafbd, yellow);
+ 　,で括っていくことで色を追加していくことも可能 
+ 色の後ろに%を指定することで割合を指定することが可能 
+ 〇〇degで反時計周りで角度（〇〇）をつけることが出来る 
+  background-blend-mode: luminosity;
+}
+*/
+
+/*ここまで*/
+#home .page-title {
+  text-transform: none;
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+  /* ↑この場合の10%は横幅の10%になるらしい？ */
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+
+
+/*ここからNewsのページ  ---------------------------
+------------------------------------------------*/
+
+#news {
+  background-image: url(../images/news-bg.jpg);
+  height: 270px;
+  margin-bottom: 40px;
+}
+
+#news .page-title {
+  text-align: center
+}
+
+
+.news-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+/*記事部分------------------------------------------*/
+
+article {
+  width: 74%;
+  /*  background-color: beige;*/
+}
+
+.post-info {
+  padding-top: 4px;
+  margin-bottom: 40px;
+  position: relative;
+  /* 親要素にrelativeを指定すれば、子要素のabsoluteの動ける範囲を教える */
+}
+
+.post-date {
+  background-color: #0bd;
+  border-radius: 50%;
+  color: #f8f8f8;
+  width: 100px;
+  height: 100px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 1.625rem;
+  position: absolute;
+  top: 0;
+  /*↑ absoluteはこの要素は自由に動いていいですよ。という指定*/
+  /* かつabsoluteで指定した後、どこに配置するか指定（TOP）*/
+}
+
+.post-date span {
+  font-size: 1rem;
+  display: block;
+  border-top: solid 1px rgba(255, 255, 255, 0.5);
+  padding-top: 6px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.post-title {
+  font-family: "YU mincho", "Yumincho", serif;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.post-cat,
+.post-title {
+  /* ↑、複数のクラスを指定する場合は、間を「,」で区切る*/
+  margin-left: 120px;
+}
+
+article img {
+  margin-bottom: 20px;
+  /* 共通cssでimgタグはmax-width：100%で指定してあるので
+  ここでサイズ調整をしなくても、articleをはみ出すことがない*/
+}
+
+article p {
+  margin-bottom: 1rem;
+}
+
+/*サイド部分------------------------------------------*/
+
+aside {
+  width: 22%;
+  /*  background-color: lightblue;*/
+}
+
+/*計100%にしないのは、残りの%を余白にするため*/
+
+aside p {
+  padding: 12px 10px;
+}
+
+.sub-menu {
+  margin-bottom: 60px;
+}
+
+aside li {
+  list-style-type: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+aside li a {
+  color: #432;
+  display: block;
+  /* ↑blockで括ると、領域全体をホバー指定出来る */
+}
+
+aside a:hover {
+  color: #0bd;
+}
+
+/*3カラムにする場合は、articleの横幅の調整が必要*/
+/*
+article {
+  width: 60%;
+  order: 2;
+}
+
+aside {
+  order: 3;
+}
+
+.ad {
+  order: 1;
+}
+*/
+
+/*Menuここから-----------------------------------
+------------------------------------------------*/
+
+#menu {
+  background-image: url(../images/menu-bg.jpg);
+  min-height: 100vh;
+}
+
+.menu-content {
+  max-width: 560px;
+  margin-top: 10%;
+}
+
+.menu-content .page-title {
+  text-align: center;
+}
+
+.menu-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 0;
+}
+
+.grid {
+  display: grid;
+  /*  grid-template-columns: 200px 200px 200px;*/
+  /* ↑これはpx指定なので、幅を固定させるやり方 */
+  /*  grid-template-columns: repeat(3, minmax(240px, 1fr));*/
+  /* ↑これだと、3列目が表示幅によっては見切れてしまうので↓のように指定 */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* ↑「fr」は比率なので、↑だと均等に（親要素から見て）3分割する指定 */
+  gap: 26px;
+  margin: 6% auto 50px;
+}
+
+/*グリッドカスタマイズ例ここから*/
+
+.big-box {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.big-box img {
+  width: 100%;
+  height: 94%;
+  object-fit: cover;
+}
+
+/*グリッドカスタマイズ例ここまで*/
+
+/*contactここから--------------------------------
+------------------------------------------------*/
+
+#contact {
+  background-image: url(../images/contact-bg.jpg);
+  min-height: 100vh;
+}
+
+/*form----------------------*/
+form div {
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, .5);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#location {
+  padding: 4% 0;
+}
+
+#location .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-info {
+  width: 22%;
+}
+
+.location-info p {
+  padding: 12px 10px;
+}
+
+.location-info address {
+  padding: 0 10px;
+  font-style: normal;
+}
+
+.location-map {
+  width: 74%;
+}
+
+iframe {
+  width: 100%;
+}
+
+#sns {
+  background: #FAF7F0;
+  padding: 4% 0;
+}
+
+#sns .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sns .sub-title {
+  margin-bottom: 30px;
+}
+
+.sns-box {
+  width: 30%;
+}
+
+
+
+/*パソコン版設定ここまで----------------------------
+------------------------------------------------*/
+
+
+
+/*レスポンシブ対応---------------------------------
+------------------------------------------------*/
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  /* header内の調整 */
+  .page-header {
+    flex-direction: column;
+    /*  columnで縦横を変更すると、水平方向指定のjustifyも縦向きになるので
+    水平方向に調整したい場合はalign-itmesで変更に代わる*/
+    align-items: center;
+  }
+
+  .main-nav {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .main-li {
+    margin: 0 20px;
+  }
+
+  /* ホームコンテンツ内 ------------------*/
+  .home-content {
+    margin-top: 20%;
+  }
+
+  /*newsコンテンツ内---------------------*/
+  #news .page-title {
+    margin-top: 30px;
+  }
+
+  .news-contents {
+    flex-direction: column;
+  }
+
+  article,
+  aside {
+    width: 100%;
+  }
+
+  aside {
+    margin-top: 60px;
+  }
+
+  .post-info {
+    margin-bottom: 30px;
+  }
+
+  .post-date {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+
+  .post-date span {
+    font-size: 0.875rem;
+    padding: 2px 0 0 0;
+  }
+
+  .post-title,
+  .post-cat {
+    margin-left: 80px;
+  }
+
+  .post-title {
+    font-size: 1.75rem;
+  }
+
+  .post-cat {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+
+
+  /*Menu内容--------------------------*/
+  .menu-content {
+    margin-top: 20%;
+  }
+
+  /* gridのカスタマイズ */
+  .big-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* grid: auto で初期設定に戻る */
+
+  .big-box img {
+    height: auto;
+  }
+
+  /* ↑トリミングしていたものを戻す */
+
+
+  /*Contact内容-------------------------*/
+  #contact .page-title {
+    margin-top: 40px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    max-width: 100%;
+  }
+
+  #location .wrapper,
+  #sns .wrapper {
+    flex-direction: column;
+  }
+
+  .location-info,
+  .location-map,
+  .sns-box {
+    width: 100%;
+  }
+
+  .sns-box {
+    margin-bottom: 30px;
+  }
+
+}
+
+/*この｛｝内に全て入れていく。この場合、600px以下になった場合
+レスポンシブの対応に切り替わる*/

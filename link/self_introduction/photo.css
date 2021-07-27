@@ -1,0 +1,13 @@
+@charset :"utf-8";
+
+body {
+  background-image: url("img/favorite/intro/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  background-attachment: fixed;
+}
+
+body div {
+    vertical-align: middle;
+}

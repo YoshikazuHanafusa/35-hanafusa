@@ -1,0 +1,436 @@
+@charset "utf-8";
+
+/*全般設定ここから*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fdfdfd;
+  line-height: 1.8em;
+  font-family: 'a-otf-ud-shin-go-pr6n', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+body p,
+a {
+  font-family: 'a-otf-ud-shin-go-pr6n', sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 320px 0 320px;
+}
+
+/*全般設定ここまで*/
+
+/*ヘッダーここから*/
+/*ヘッダーここまで*/
+
+/*TOPページここから*/
+
+.top_page {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 20% 120px 30%;
+  background-image: url(../img/scroll.png);
+  background-position: 50% 92%;
+}
+
+h2,
+h5 {
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.yen {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.yen a {
+  margin-left: 50px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.yen a:first-child {
+  margin-left: 0;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #564539;
+  border-radius: 50%;
+  color: #fdfdfd;
+  transition: 3s;
+}
+
+.circle_w {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #fdfdfd;
+  border-radius: 50%;
+  border: solid 1px #564539;
+  color: #564539;
+  transition: 3s;
+}
+
+/*サークルホバー時の設定ここから*/
+.circle:hover {
+  background-color: #fdfdfd;
+  border: solid 1px #564539;
+  color: #564539;
+  width: 135px;
+  height: 135px;
+  line-height: 135px;
+  transition: 1.0s;
+}
+
+.circle_w:hover {
+  background-color: #564539;
+  color: #fdfdfd;
+  width: 135px;
+  height: 135px;
+  line-height: 135px;
+  transition: 1.0s;
+}
+
+/*サークルホバー時の設定ここまで*/
+
+/*TOPページここまで*/
+
+
+/*worksここから*/
+
+.works_bg {
+  background-color: #eceae9;
+}
+
+.works {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.works_origin {
+  margin-left: -160px;
+}
+
+.works_1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.works_p {
+  width: 200px;
+  margin: 0 5px;
+}
+
+.works_p p {
+  font-size: 13.28px;
+  line-height: 1.6;
+}
+
+.click {
+  margin-bottom: 100px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #564539;
+  font-weight: bold;
+  transition: .5s;
+}
+
+.click:hover {
+  font-size: 18px;
+  transition: 1s;
+}
+
+.finger {
+  width: 2em;
+  height: auto;
+  margin-right: 5px;
+}
+
+/*workのhover設定ここから*/
+.works_img:hover {
+  opacity: .6;
+  transition: .5s;
+  border-radius: 30%;
+}
+
+/*workのhover設定ここまで*/
+
+/*worksここまで*/
+
+
+/*skillここから*/
+
+.skill {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.skill_origin {
+  margin-left: -160px;
+}
+
+.pc {
+  margin-top: 50px;
+  width: 100%;
+  min-width: 600px;
+  height: auto;
+  display: block;
+}
+
+
+.sp {
+  display: none;
+}
+
+/*skillここまで*/
+
+
+/*profileここから*/
+
+.profile {
+  background-color: #564539;
+  color: #fdfdfd;
+  padding-top: 120px;
+  padding-bottom: 175px;
+}
+
+.profile p {
+  padding-left: 160px;
+}
+
+.profile_intro {
+  margin: 65px auto 0;
+  padding: 0 320px 0 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_contents {
+  margin-left: 70px;
+  line-height: 3em;
+  letter-spacing: 1.5px;
+}
+
+td {
+  padding: 0 20px;
+}
+
+/*profileここまで*/
+
+
+/*contactここから*/
+
+.contact {
+  margin-top: 125px;
+  margin-bottom: 220px;
+}
+
+.contact p {
+  padding-left: 160px;
+  margin-bottom: 80px;
+}
+
+.contact table {
+  margin: 0 auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/*contactここまで*/
+
+
+/*footerここから*/
+
+footer {
+  background-color: #564539;
+  text-align: center;
+  height: 50px;
+}
+
+.footer {
+  color: #fdfdfd;
+  font-size: 12px;
+}
+
+
+small {
+  line-height: 50px;
+}
+
+/*footerここまで*/
+
+
+
+
+
+/*レスポンシブ設定ここから*/
+
+@media (max-width: 600px) {
+
+  /*topページ設定*/
+
+  .wrapper {
+    margin: 0 auto;
+    padding: 0 30px 0 30px;
+  }
+
+  .top_page {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .circle_w {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .circle:hover {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+  }
+
+  .circle_w:hover {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+  }
+
+  .yen a {
+    margin-left: 20px;
+    font-size: 14px;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  /*workページ設定*/
+
+  .works_bg {
+    padding-top: 60px;
+  }
+
+  .works_origin {
+    margin-left: 0px;
+  }
+
+  .works_p {
+    max-width: 200px;
+  }
+
+  .works_p img {
+    width: 100%;
+    height: auto;
+  }
+
+  .works_1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .works_p p {
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  /*profile設定*/
+
+  .profile {
+    margin: 50px auto;
+    padding: 60px 0 70px 0;
+    width: 100vw;
+  }
+
+  .profile p {
+    padding-left: 30px;
+  }
+
+  .profile_intro {
+    margin: 0 auto;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .profile_intro img {
+    margin-bottom: 30px;
+  }
+
+  td {
+    padding: 0 0 0 20px;
+  }
+
+
+  /*skill設定*/
+
+  .skill {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    height: 100vh;
+  }
+
+  .skill_origin {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .sp {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .pc {
+    display: none;
+  }
+
+
+  /*contact設定*/
+
+  .contact {
+    margin-top: 100px;
+    margin-bottom: 180px;
+  }
+
+  .contact p {
+    padding-left: 30px;
+  }
+}
+
+/*レスポンシブ設定ここまで*/
+
+
+/*アニメーション関連ここから*/

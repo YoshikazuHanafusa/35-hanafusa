@@ -1,0 +1,36 @@
+@charset: "UTF-8";
+
+body {
+  background-image: url("img/favorite/game/SPB2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sample {
+  margin: 0;
+  padding: 0;
+}
+
+.item1{
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+
+.item2{
+  position: absolute;
+  bottom: 0;
+  left: 30;
+}
+
+.item3{
+  position: absolute;
+  top: 130px;
+  right: 170px;
+}
+
+.item4{
+  position: absolute;
+  top: 0;
+  right: 0;
+}

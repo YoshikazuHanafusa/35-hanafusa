@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Y.HANAFUSA</title>
+    <meta name="description" content="花房慶和のプロフィール">
+    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <header>
+        <nav class="gnavi">
+            <div class="gnavi_inner">
+                <ul>
+                    <li><a href="index.html"><span>TOP</span></a></li>
+                    <li><a href="history.html"><span>history</span></a></li>
+                    <li><a href="favorite.html"><span>favorite</span></a></li>
+                    <li><a href="introduce.html"><span>introduce</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+  <body class="fo">
+    <div class="fade_group">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="fade_group2">
+      <div></div>
+      <div></div>
+    </div> 
+    <article>
+        <section class="logo">
+            <img src="img/asset2.png" alt="自己紹介ロゴ">
+        </section>
+        <div class="info">
+            <section class="myself">
+                <ul>
+                    <li>花房 慶和</li>
+                    <li>1986.12.22</li>
+                    <li>広島県広島市</li>
+                    <li>O型</li>
+                </ul>
+            </section>
+            <section class="myself1">
+                <ul>
+                    <li>氏名</li>
+                    <li>生年月日</li>
+                    <li>生まれ</li>
+                    <li>血液型</li>
+                </ul>
+            </section>
+        </div>
+        <section class="last">
+            <img src="img/asset3.png" alt="意気込み">
+        </section>
+    </article>
+    <script>
+    $(window).on('load', function(){
+    $('body').removeClass('fo');
+    });
+    $(function() {
+    $('a:not([href^="#"]):not([target])').on('click', function(e){
+    e.preventDefault();
+    url = $(this).attr('href');
+    if (url !== '') {
+    $('body').addClass('fadeout');
+    setTimeout(function(){
+    window.location = url;
+    }, 100);
+    }
+    return false;
+    });
+    });
+    </script>
+</body>
+
+

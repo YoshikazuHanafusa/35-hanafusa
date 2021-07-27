@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gnavi {
+  height: 80px;
+  background-color: rgb(232, 226, 207);
+  box-shadow: 0 3px 6px -3px #000000 inset;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.gnavi_inner {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.gnavi ul {
+  height: 100%;
+  display: flex;
+  margin: 0 -20px;
+}
+
+.gnavi li {
+  flex: 1 1;
+  position: relative;
+  display: flex;
+}
+
+.gnavi li::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: #b8b9dc;
+  position: absolute;
+  right: -1px;
+  top: calc((100% - 20px)/2);
+}
+
+.gnavi li:last-child::after {
+  content: none;
+}
+
+.gnavi a {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.gnavi a:hover span {
+  color: #008b8b;
+  position: relative;
+}
+
+.gnavi a:hover span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  background-color: #008b8b;
+  border-radius: 5px;
+}
+
+.gnavi span {
+  display: flex;
+  align-items: center;
+  word-break: keep-all;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: all .4s ease 0s, background .6s ease .2s;
+  transition: all .4s ease 0s, background .6s ease .2s;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  height: 80px;
+}
+
+body {
+  background-image: url("img/haikei1.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  width: auto;
+  height: 940px;
+  color: #333;
+}
+
+.fade_group div ,
+.fade_group2 div {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+}
+.fade_group div {
+  z-index: 9999;
+  transition: .6s;
+}
+.fade_group2 div {
+  z-index: 9998;
+  transition: .8s;
+}
+.fade_group div:nth-of-type(1) {
+  background: rgba(175,151,94,.3);
+}
+.fade_group div:nth-of-type(2) {
+  background: rgba(175,151,94,.5);
+  transition-delay:.1s;
+}
+.fade_group div:nth-of-type(3) {
+  background: rgba(175,151,94,.7);
+  transition-delay:.2s;
+}
+.fade_group div:nth-of-type(4) {
+  background: rgba(50,50,50,1);
+  transition-delay:.3s;
+}
+.fade_group2 div:nth-of-type(1) {
+  background: rgba(175,151,94,.8);
+  transition-delay: .2s;
+}
+.fade_group2 div:nth-of-type(2) {
+  background: rgba(175,151,94,.8);
+  transition-delay: .3s;
+}
+body.fo .fade_group div{
+  left: 0;
+}
+body.fo .fade_group2 div{
+  left: 100vw;
+}
+
+h4 a {
+  color: dodgerblue;
+}
+
+a.anchor {
+  display: block;
+  padding-top: 90px;
+  margin-top: -90px;
+}
+
+main {
+  width: 880px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+.link {
+  text-align: right;
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 120px;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+body p {
+  line-height: 0.5em;
+
+}
+
+.bumpdv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kaera {
+  margin-top: 80px;
+}
+
+.kaera1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game {
+  margin-top: 120px;
+}
+
+.game1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ika {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.ika gif {
+  width: 100px;
+}
+
+.ika p {
+  line-height: 1.5em;
+}
+
+.foods {
+  margin-top: 120px;
+}
+
+.foods1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.foodsh {
+  display: flex;
+  width: 880px;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.foodsh1 {
+  display: flex;
+  width: 880px;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.foodsh img {
+  width: 292px;
+}
+
+.foodsh1 img {
+  width: 292px;
+}
+
+.foodsw {
+  display: flex;
+  width: 880px;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.foodsw img {
+  width: 438px;
+}
+
+#pagetop {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+}
+
+#TOP {
+  margin-top: -180px;
+  padding-top: 180px;
+}

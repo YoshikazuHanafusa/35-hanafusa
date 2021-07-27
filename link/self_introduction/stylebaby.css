@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body,
+html {
+  height: 100%;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  font-size: 10px;
+  background-attachment: fixed;
+}
+
+div {
+  box-sizing: border-box;
+  color: #333;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 5%;
+}
+
+.parallax-bg {
+  background-image: url("img/favorite/baby/yuto.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.scrollbox1 {
+  background-color: #111;
+  text-align: left;
+  color: antiquewhite;
+}
+
+.scrollbox2 {
+  background-color: #222;
+  display: flex;
+}
+
+img {
+  margin: 2px;
+}
+

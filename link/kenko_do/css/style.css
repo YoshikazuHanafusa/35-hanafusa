@@ -1,0 +1,565 @@
+@charset "utf-8";
+
+
+/*TOP_Page　動画の設定*/
+.kenko_video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.wrap {
+  height: 100vh;
+  background: linear-gradient(-45deg, rgba(200, 200, 200, 0.4), rgba(200, 200, 200, 0.6));
+}
+
+.video_title {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.video_h3 {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 40px;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 52px;
+  text-align: center;
+  text-indent: -2em;
+  color: #2c2625;
+}
+
+
+/*タイトルの虹グラデーションの設定*/
+/*
+.rainbow {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+   アニメーション指定 
+  animation: example 4s linear infinite;
+}
+
+@keyframes example {
+  to {
+    background-position-x: 200%;
+  }
+}
+*/
+
+
+.enter {
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  text-indent: .5em;
+  font-size: 24px;
+  transition: 1s;
+  color: #fdfdfd;
+}
+
+.enter:hover {
+  font-size: 32px;
+  color: #2c2625;
+  transition: 1s;
+  letter-spacing: .2em;
+  font-weight: bold;
+}
+
+/*TOP_Page　動画の設定ここまで*/
+
+
+/*バーガーメニューここから*/
+
+
+
+/*バーガーメニューここまで*/
+
+
+
+/*indexページ設定ここから*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*animationの設定*/
+
+.fade {
+  transition: all 2000ms;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, 50px);
+}
+
+.fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+}
+
+/*animationの設定ここまで*/
+
+body p,
+li,
+h3,
+h2,
+h4 {
+  font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+}
+
+h3 {
+  margin-bottom: 70px;
+  margin-left: 80px;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  color: #333;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.top_page {
+  height: 100vh;
+  width: 100%;
+  background-color: #f2f7f4;
+  padding-top: 30px;
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.top_page h3 {
+  margin: 0 0 0 75px;
+  color: #43b684;
+  font-family: 'Philosopher', sans-serif;
+}
+
+.gnavi_list {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  margin-right: 160px;
+}
+
+.gnavi ul li {
+  margin-left: 30px;
+}
+
+.gnavi ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top_page h4 {
+  margin-left: 160px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+}
+
+.top_page p {
+  margin-left: 240px;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.top_page p span {
+  font-size: 24px;
+}
+
+.bxslider img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*indexページ設定ここまで*/
+
+
+/*ABOUTページ設定ここから*/
+
+.about_page {
+  height: 100vh;
+  display: flex;
+}
+
+.about_page img {
+  max-width: 550px;
+  max-height: 550px;
+}
+
+.about_text {
+  margin-left: 50px;
+}
+
+.about_text h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.about_text h2 span {
+  font-family: 'Philosopher', sans-serif;
+}
+
+.about_text h4 {
+  margin-bottom: 30px;
+  text-indent: 1em;
+}
+
+.about_text p {
+  line-height: 2.5em;
+  font-size: 16px;
+  margin-left: 1em;
+}
+
+/*ABOUTページ設定ここまで*/
+
+
+/*SERVICEページ設定ここから*/
+
+.service_bg {
+  position: relative;
+  height: 100vh;
+  margin-bottom: 100px;
+}
+
+.service_bg_bgc {
+  background-color: #f2f7f4;
+  width: 1200px;
+  height: 880px;
+  position: absolute;
+  z-index: -100;
+  margin-top: -130px;
+}
+
+.service_page {
+  display: flex;
+}
+
+.service_text {
+  max-width: 500px;
+  margin-right: 50px;
+}
+
+.service_img {
+  flex-direction: column;
+}
+
+.service_img_item {
+  display: flex;
+}
+
+.service_img_item img {
+  margin-bottom: 20px;
+  max-width: 270px;
+  max-height: 270px;
+  overflow: hidden;
+}
+
+.hidden {
+  overflow: hidden;
+  position: relative;
+  margin-left: 20px;
+}
+
+.hidden .caption {
+  font-size: 130%;
+  font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+  text-align: center;
+  padding-top: 80px;
+  color: #fff;
+}
+
+.hidden .mask {
+  width: 270px;
+  height: 270px;
+  position: absolute;
+  /* 絶対位置指定 */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* マスクを表示しない */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.6s ease;
+}
+
+.hidden:hover .mask {
+  opacity: 1;
+  padding-top: 80px;
+}
+
+.service_text {
+  margin-top: 30px;
+  width: 500px;
+  min-width: 375px;
+}
+
+.service_text h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.service_text h4 {
+  margin-bottom: 30px;
+}
+
+.service_text p {
+  line-height: 2.5em;
+  font-size: 16px;
+}
+
+/*SERVICEページ設定ここまで*/
+
+
+/*productページ設定ここから*/
+
+.product {
+  background-image: url(../img/product_bg2.png);
+  background-size: cover;
+  margin-bottom: 180px;
+  padding-bottom: 100px;
+}
+
+.product_info {
+  padding-top: 100px;
+}
+
+.product_info h4 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.product_info h4:last-child {
+  color: #fdfdfd;
+  margin-bottom: 30px;
+}
+
+.product_bg {
+  max-width: 1000px;
+  background-color: #fdfdfd;
+  border-radius: 1.5em;
+  margin: 0 auto;
+  padding: 1%;
+  box-shadow: 0 0 12px gray;
+}
+
+
+.product_img {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+
+.product_content {
+  flex-direction: column;
+  max-width: 220px;
+  text-align: center;
+}
+
+.product_content a {
+  text-decoration: none;
+  color: #4c4341;
+}
+
+
+.product_content h5 {
+  font-size: 20px;
+  font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+  margin-bottom: 15px;
+  transition-duration: 0.5s;
+}
+
+.product_content h5:hover {
+  font-size: 24px;
+  transition-duration: 0.5s;
+}
+
+
+.product_content img {
+  max-width: 170px;
+  height: auto;
+}
+
+.img_wrap {
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  margin: 20px auto 0;
+  transition-duration: 0.5s;
+}
+
+.img_wrap img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.img_wrap:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px);
+  transition-duration: 0.5s;
+}
+
+.product_content p span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4c4341;
+}
+
+.product_content p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.8em;
+  margin-top: 10px;
+}
+
+/*productページ設定ここまで*/
+
+
+/*contactページ設定ここから*/
+
+.contact_page {
+  max-width: 960px;
+  margin: 0 auto 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_heading {
+  background-color: #43b684;
+  padding: 8px 12px;
+  font-size: 20px;
+  color: #fdfdfd;
+  letter-spacing: 0.15em;
+}
+
+.heading {
+  margin-bottom: 40px;
+}
+
+.contact_content {
+  background-color: #ecf8f2;
+  width: 350px;
+  height: 500px;
+  padding: 20px;
+}
+
+.contact_content p {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: #fdfdfd;
+  border: 1px solid #666666;
+}
+
+input {
+  margin-bottom: 30px;
+}
+
+textarea {
+  width: 90%;
+  height: 40%;
+  margin-bottom: 35px;
+}
+
+input[type="button"] {
+  background-color: #fdfdfd;
+  border: 1px solid #666666;
+  border-radius: .3em;
+  padding: .3em 0.5em;
+}
+
+.map_info {
+  margin-left: 30px;
+  max-width: 600px;
+  height: auto;
+}
+
+.map_content {
+  background-color: #ecf8f2;
+  padding: 20px;
+  height: 500px;
+}
+
+.map_content p {
+  margin-bottom: 30px;
+}
+
+.map_content img {
+  height: auto;
+  max-width: 70%;
+  background-color: #fdfdfd;
+}
+
+
+/*footer設定ここから*/
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333333;
+  align-items: center;
+  height: 100px;
+}
+
+.footer_heading {
+  font-family: 'Philosopher', sans-serif;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3em;
+  font-size: 20px;
+}
+
+.footer_heading a {
+  color: #fdfdfd;
+  text-decoration: none;
+}
+
+.copyright small {
+  color: #fdfdfd;
+}
+
+
+
+
+
+
+
+
+
+
+/*footer設定ここまで*/
+
+
+
+/*contactページ設定ここまで*/

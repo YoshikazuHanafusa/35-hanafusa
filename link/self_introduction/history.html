@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Y.HANAFUSA History</title>
+  <meta name="description" content="来歴">
+  <link rel="stylesheet" href="stylehs.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+  <body class="fo">
+  <div class="fade_group">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="fade_group2">
+    <div></div>
+    <div></div>
+  </div> 
+  <header>
+    <nav class="gnavi">
+      <div class="gnavi_inner">
+        <ul>
+          <li><a href="index.html"><span>TOP</span></a></li>
+          <li><a href="history.html"><span>history</span></a></li>
+          <li><a href="favorite.html"><span>favorite</span></a></li>
+          <li><a href="introduce.html"><span>introduce</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <article>
+    <h1 class="history">History</h1>
+    <section class="birth">
+      <h1 class="sonota margin">広島県広島市の宇品にて誕生</h1>
+      <p>小学生になるまで、岡山・東京に引っ越し、小学校入学時に広島に再度引っ越し。</p>
+      <p>以降はずっと広島に在住しています。</p>
+      <p>・美鈴が丘市立高校卒業</p>
+      <p>・広島修道大学法学部法律学科卒業（半年留年）</p>
+    </section>
+    <section>
+      <h2>高校生・大学生時代は友人たちに 「はなふさ」 から「さ」を取って<br>「<font color="#db1456">はなふ</font>」って呼ばれていました。</h2>
+      <p>命名の由来は、高校生活の際、クラスで<font color="blue">「人の名前って3文字が一番読みやすいよな？」</font>
+      </p>
+      <p>という謎の学生ルールが発動</p>
+      <p>苗字が2文字の人は1文字追加され、4文字以上の人は3文字に削られるという謎ルールに</p>
+      <p>したがって、このように呼ばれる様になりました。</p>
+    </section>
+    <section>
+      <h1 class="sonota">その後</h1>
+      <p>大学卒業後、竹原でホテルマンを経験、アルバイト時代にお世話になっていた、広島市内の</p>
+      <p>リサイクルショップに転職。そこで数年間勤務し退職。</p>
+      <p>エアコンの営業職を経た後、再度同リサイクルショップに再就職。そこで去年の10月末に</p>
+      <p>体調を酷くこじらせた為、退職。</p>
+      <p>再就職に向けて動いている間に、PCスクールHA*NAのWebデザイナー養成科の求職者支</p>
+      <p>援のパンフを拝見し、応募しました。</p>
+    </section>
+  </article>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    $(function() {
+      var $win = $(window),
+        $main = $('main'),
+        $nav = $('nav'),
+        navHeight = $nav.outerHeight(),
+        navPos = $nav.offset().top,
+        fixedClass = 'is-fixed';
+
+      $win.on('load scroll', function() {
+        var value = $(this).scrollTop();
+        if (value > navPos) {
+          $nav.addClass(fixedClass);
+          $main.css('margin-top', navHeight);
+        } else {
+          $nav.removeClass(fixedClass);
+          $main.css('margin-top', '0');
+        }
+      });
+    });
+  </script>
+  <script>
+    $(window).on('load', function(){
+      $('body').removeClass('fo');
+    });
+    $(function() {
+      $('a:not([href^="#"]):not([target])').on('click', function(e){
+        e.preventDefault();
+        url = $(this).attr('href');
+        if (url !== '') {
+          $('body').addClass('fadeout');
+          setTimeout(function(){
+            window.location = url;
+          }, 100);
+        }
+        return false;
+      });
+    });
+  </script>
+
+</body>

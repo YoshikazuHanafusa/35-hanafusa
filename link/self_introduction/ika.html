@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>スプラトゥーン2の紹介</title>
+  <meta name="description" content="スプラトゥーン2">
+  <link rel="stylesheet" href="ika.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <ul class="sample">
+    <li class="item1"><img src="img/favorite/game/SPU/1.png" width="1500"></li>
+    <li class="item2"><img src="img/favorite/game/SPU/2.png" width="600"></li>
+    <li class="item3"><img src="img/favorite/game/SPU/3.png"></li>
+    <li class="item4"><img src="img/favorite/game/SPU/4.png"></li>
+  </ul>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+    $(function(){
+      $(window).load(function(){
+        var delaySpeed = 1200;
+        var fadeSpeed = 1000;
+        $('ul li').each(function(i){
+          $(this).delay(i*(delaySpeed)).css({display:'block',opacity:'0'}).animate({opacity:'1'},fadeSpeed);
+        });
+      });
+    });
+  </script>
+</body>
