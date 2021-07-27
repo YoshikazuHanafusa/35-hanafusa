@@ -33,11 +33,17 @@ a {
 
 .top_page {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   text-align: center;
-  padding: 20% 120px 30%;
+  display:  table-cell;       /* テーブルセルにする */
+  vertical-align:  middle;    /* 中央寄せ */
   background-image: url(../img/scroll.png);
   background-position: 50% 92%;
+}
+
+.top_box {
+  width: 100%;
+  margin: 0 auto;
 }
 
 h2,
@@ -139,19 +145,44 @@ h5 {
   line-height: 1.6;
 }
 
+.click_strong {
+  margin-bottom: 100px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fdfdfd;
+  background-color: #564539;
+  border: solid 1px #564539;
+  transition: .5s;
+  padding: .5em 1em;
+}
+
+.click_strong:hover {
+  transition: 1s;
+  border: solid 1px #fdfdfd;
+  color: #564539;
+  background-color: #eceae9;
+  font-size: 16px;
+  border: solid 1px #564539;
+}
+
 .click {
   margin-bottom: 100px;
   text-decoration: none;
   font-size: 14px;
   line-height: 1.6;
   color: #564539;
-  font-weight: bold;
   transition: .5s;
+  border: solid 1px #564539;
+  padding: .5em 1em;
 }
 
 .click:hover {
-  font-size: 18px;
   transition: 1s;
+  border: solid 1px #fdfdfd;
+  color: #fdfdfd;
+  background-color: #564539;
+  font-size: 16px;
 }
 
 .finger {
@@ -295,9 +326,7 @@ small {
     height: 100vh;
     width: 100vw;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: table-cell;
   }
 
   .circle {
@@ -345,6 +374,7 @@ small {
 
   .works_p {
     max-width: 200px;
+    margin-bottom: 30px;
   }
 
   .works_p img {
@@ -370,6 +400,12 @@ small {
     margin: 50px auto;
     padding: 60px 0 70px 0;
     width: 100vw;
+  }
+  
+  .profile_contents {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 14px;
   }
 
   .profile p {
