@@ -21,7 +21,7 @@ a {
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 320px 0 320px;
+  padding: 0 5%;
 }
 
 /*全般設定ここまで*/
@@ -246,7 +246,6 @@ h5 {
 
 .profile_intro {
   margin: 65px auto 0;
-  padding: 0 320px 0 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -312,7 +311,7 @@ small {
 
 
 
-/*レスポンシブ設定ここから*/
+/*レスポンシブ設定ここから---------------------------------------------------------*/
 
 @media (max-width: 600px) {
 
@@ -425,6 +424,10 @@ small {
 
   .profile_intro img {
     margin-bottom: 30px;
+  }
+  
+  table {
+    margin: 0 auto;
   }
 
   td {

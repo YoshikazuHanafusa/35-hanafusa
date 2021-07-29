@@ -79,7 +79,7 @@
 
 .enter:hover {
   /*    font-size: 32px;*/
-  transition: 1s;
+  transition: .5s;
   /*    letter-spacing: .2em;*/
   /*    font-weight: bold;*/
   color: #2c2625;
@@ -89,11 +89,25 @@
 /*TOP_Page　動画の設定ここまで*/
 
 
-/*バーガーメニューここから*/
+/*スクロール合間設定ここから*/
 
+.parallax-bg {
+  background-image: url("../img/yuto.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 5%;
+  color: #fdfdfd;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Philosopher', sans-serif;
+}
 
-
-/*バーガーメニューここまで*/
+/*スクロール設定ここまで*/
 
 
 
@@ -330,7 +344,7 @@ p {
 .service_text {
   margin-top: 30px;
   width: 500px;
-/*
+  /*
   min-width: 375px;
   max-width: 500px;
 */
@@ -571,40 +585,167 @@ footer {
 
 
 
-/*レスポンシブ設定--------------------------------------------------------------------*/
+
+/*レスポンシブ設定 pc.tab向け--------------------------------------------------------------------*/
+
+@media (max-width: 1240px) {
+  
+  .wrapper {
+    max-width: 100%;
+  }
+
+  .video_h3 {
+    font-size: 50px;
+  }
+  
+  .product {
+    background-image: none;
+    background-color: aqua;
+    background-size: cover;
+    margin-bottom: 180px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 1080px) {
+
+  .about_page img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .about_text p {
+    font-size: 14px;
+    line-height: 2em;
+  }
+
+  .service_bg_bgc {
+    width: 800px;
+    height: 780px;
+  }
+
+  .service_text p {
+    font-size: 14px;
+  }
+
+  .product_bg {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 980px) {
+  
+  .service_img_item img {
+    margin-bottom: 20px;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+  }
+  
+  .hidden .mask {
+    width: 200px;
+    height: 200px;
+  }
+  
+}
+
+@media (max-width: 880px) {
+  
+  .about_page {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 160px;
+  }
+  
+  .about_text {
+    margin-left: 0;
+  }
+  
+  .service_bg_bgc {
+    background-color: #f2f7f4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -100;
+    margin-top: 0;
+  }
+  
+  .service_page {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .service_img_item {
+    justify-content: center;
+  }
+  
+  .service_text {
+    margin: 30px auto 20px;
+    width: 500px;
+  }
+  
+  h3 {
+    margin-bottom: 40px;
+  }
+  
+  .product_bg {
+    max-width: 95%;
+  }
+  
+  .img_wrap {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 10px auto 0;
+    transition-duration: 0.5s;
+  }
+  
+  .product_img {
+    justify-content: space-around;
+  }
+  
+  
+}
+
+/*レスポンシブ設定 スマートフォン向け--------------------------------------------------------------------*/
 
 @media (max-width: 600px) {
 
   body {
     background-color: #f2f7f4;
   }
-  
+
   .wrap {
-    background-image: url(../img/top_hero_bg.jpg);
-    background-position: top center;
+    background-image: url(../img/top_hero_bg_3.jpg);
+    background-position: 40% 30%;
     background-repeat: no-repeat;
   }
-  
+
   .kenko_video {
     display: none;
   }
-  
+
   .video_title {
     width: 100%;
-    padding-top: 80%;
     text-shadow: 1px 1px 1px #fff;
   }
-  
+
   .video_h3 {
     font-size: 32px;
   }
-  
+
+  .parallax-bg {
+    display: none;
+  }
+
   .enter {
+    display: none;
     font-size: 12px;
     padding: 1em 1.5em;
     text-shadow: 0 0 0;
   }
-  
+
   .enter:hover {
     /*    font-size: 32px;*/
     transition: 1s;
@@ -639,6 +780,11 @@ footer {
     max-width: 100%;
   }
 
+  .gnavi {
+    display: none;
+  }
+
+  /*
   .gnavi ul li {
     margin-left: 20px;
   }
@@ -650,12 +796,14 @@ footer {
   .gnavi ul li a {
     font-size: 14px;
   }
+*/
 
   .top_page h4 {
     margin-left: 0;
     margin-bottom: 25px;
     font-size: 20px;
-    letter-spacing: 0.25em;
+    padding: 0 2%;
+    letter-spacing: 0;
   }
 
   .top_page p {
@@ -674,7 +822,7 @@ footer {
 
   .top_hero_sp {
     display: block;
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
     margin: 0 auto;
   }
@@ -684,13 +832,6 @@ footer {
     margin-left: 0;
     text-align: center;
     font-size: 32px;
-  }
-
-  .about_page {
-    height: auto;
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 80px;
   }
 
   .about_page img {
@@ -711,9 +852,6 @@ footer {
     transform: translate(0px, 0px);
   }
 
-  .about_text {
-    margin-left: 0;
-  }
 
   .pc {
     display: none;
@@ -732,6 +870,7 @@ footer {
 
   .about_text h4 {
     font-size: 18px;
+    font-weight: normal;
   }
 
   .about_text p {
@@ -740,11 +879,15 @@ footer {
     line-height: 2em;
     padding: 0 3%;
   }
-  
+
   .service_bg {
     position: relative;
     height: auto;
     margin-bottom: 100px;
+  }
+  
+  .service_bg h3 {
+    margin-top: 80px;
   }
 
   .service_bg_bgc {
@@ -765,7 +908,7 @@ footer {
     width: 100%;
     text-align: center;
   }
-  
+
   .service_text h2 {
     font-size: 22px;
     font-weight: bold;
@@ -773,9 +916,11 @@ footer {
 
   .service_text h4 {
     font-size: 18px;
+    font-weight: normal;
   }
-  
+
   .service_img_item {
+    flex-wrap: wrap;
     justify-content: space-around;
   }
 
@@ -785,11 +930,11 @@ footer {
     max-height: 180px;
     overflow: hidden;
   }
-  
+
   .hidden {
     margin-left: 0;
   }
-  
+
   .hidden .caption {
     font-size: 80%;
     font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
@@ -820,29 +965,30 @@ footer {
 
   .product {
     background-image: none;
+    background-color: #f2f7f4;
     width: 100%;
     padding-bottom: 0;
     margin-bottom: 80px;
   }
-  
+
   .product_info {
     padding-top: 0;
   }
-  
+
   .product_info h4 {
     font-size: 10px;
     padding-bottom: 0;
   }
-  
+
   .product_info h4:last-child {
     color: #000;
     margin-bottom: 12px;
   }
-  
+
   .product h3 {
     margin-bottom: 20px;
   }
-  
+
   .product_bg {
     width: 100%;
     background-color: #f2f7f4;
@@ -851,77 +997,91 @@ footer {
     padding: 1%;
     box-shadow: none;
   }
-  
+
   .product_img {
     flex-wrap: wrap;
     max-width: 100%;
     justify-content: center;
+  }
+
+  .img_wrap {
+    border-radius: 2em;
+    width: 180px;
+    height: 180px;
+    margin: 10px auto 0;
+    transition-duration: 0.5s;
   }
   
   .product_content {
     max-width: 180px;
     margin: 0 5px 20px;
   }
-  
+
   .product_content h5 {
     font-size: 24px;
   }
-  
+
   .product_content p {
     font-size: 16px;
     margin-bottom: 0;
     line-height: 1.6em;
   }
-  
+
   .contact_page {
     max-width: 100%;
+    height: auto;
     margin: 0 auto 80px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .heading {
     margin-bottom: 40px;
     text-align: center;
     margin-top: 5px;
   }
-  
+
   .contact_info {
     width: 100%;
   }
-  
+
+  .contact_info .heading {
+    display: none;
+  }
+
   .contact_heading {
     padding: 8px 12px;
     font-size: 22px;
   }
-  
+
   .contact_content {
     margin-bottom: 50px;
     padding: 10px 20px 10px 30px;
     width: 100%;
   }
-  
+
   textarea {
     margin-bottom: 20px;
   }
-  
+
   .map_info {
     margin-left: 0;
     width: 100%;
     height: auto;
+    padding: 10px 20px 10px 30px;
   }
-  
+
   .map_content {
     width: 100%;
   }
-  
+
 
   .map_content img {
     height: auto;
     max-width: 95%;
     background-color: #fdfdfd;
   }
-  
+
   footer {
     flex-wrap: wrap;
     justify-content: center;
@@ -930,12 +1090,12 @@ footer {
     height: auto;
     padding: 20px 0 80px;
   }
-  
+
   .copyright {
     text-align: center;
     margin-top: 20px;
   }
-  
+
   .gnavi_sp {
     display: flex;
     justify-content: space-between;
@@ -946,12 +1106,12 @@ footer {
     position: fixed;
     bottom: 0;
   }
-  
+
   .gnavi_sp li a {
     text-decoration: none;
     color: #fdfdfd;
     font-size: 14px;
     font-weight: bold;
   }
-  
+
 }

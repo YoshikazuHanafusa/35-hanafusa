@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+.tab-ui {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.tabs {
+  margin: 0 auto 80px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+}
+
+.tab {
+  margin-right: 2px;
+  border-radius: 0;
+  color: #707070;
+  cursor: default;
+  width: 30%;
+  padding: 1em;
+  font-size: 24px;
+}
+
+.tab1 {
+  background-color: #F9F5D3;
+  margin-left: 8px;
+  transition: .15s;
+}
+
+.tab1:hover {
+  box-shadow: 0 0 0 2px #707070;
+  transition: .3s;
+}
+
+.tab2 {
+  background-color: #FEE7D4;
+  margin-left: 10px;
+  transition: .15s;
+}
+
+.tab2:hover {
+  box-shadow: 0 0 0 2px #707070;
+  transition: .3s;
+}
+
+.tab3 {
+  background-color: #DCF6F4;
+  margin-left: 10px;
+  transition: .15s;
+}
+
+.tab3:hover {
+  box-shadow: 0 0 0 2px #707070;
+  transition: .3s;
+}
+
+.tab1.active {
+  background-color: #F9F5D3;
+  font-weight: bold;
+}
+
+.tab2.active {
+  background-color: #FEE7D4;
+  font-weight: bold;
+}
+
+.tab3.active {
+  background-color: #DCF6F4;
+  font-weight: bold;
+}
+
+.tabbox {
+  padding: 4px 16px 8px;
+}
+
+.hide {
+  display: none;
+}
+
+
+/*レスポンシブ設定ここから----------------------------------------------------*/
+
+@media (max-width: 768px) {
+  .tabs {
+    margin: 0 auto 40px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .tab {
+    font-size: 12px;
+    align-items: center;
+  }
+  
+  .tab1:hover {
+    box-shadow: none;
+    transition: none;
+  }
+  .tab2:hover {
+    box-shadow: none;
+    transition: none;
+  }
+  .tab3:hover {
+    box-shadow: none;
+    transition: none;
+  }
+  
+}
+
+
+@media (max-width: 428px) {
+
+  .tab {
+    margin-right: 2px;
+    padding: 6px 3px;
+    color: #707070;
+    cursor: default;
+    font-weight: normal;
+    font-size: 8px;
+  }
+
+  .tab1:hover {
+    box-shadow: none;
+    transition: none;
+  }
+  .tab2:hover {
+    box-shadow: none;
+    transition: none;
+  }
+  .tab3:hover {
+    box-shadow: none;
+    transition: none;
+  }
+  
+
+
+}
