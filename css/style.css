@@ -217,10 +217,10 @@ h5 {
 }
 
 .pc {
-  margin-top: 50px;
-  width: 100%;
+  margin: 50px auto 0;
+  width: auto;
   min-width: 600px;
-  height: auto;
+  height: 90vh;
   display: block;
 }
 
@@ -287,6 +287,20 @@ address {
 
 /*contactここまで*/
 
+/*topページリンク*/
+
+#pagetop {
+  text-align: end;
+  padding-right: 1%;
+}
+
+.top {
+  width: 48px;
+  height: 64px;
+}
+
+/*topページリンクここまで*/
+
 
 /*footerここから*/
 
@@ -316,6 +330,9 @@ small {
 
 @media (max-width: 600px) {
 
+/* topアンカーリンク */
+  
+  
   /*topページ設定*/
 
   .wrapper {
@@ -371,12 +388,12 @@ small {
   }
 
   .works_origin {
-    margin-left: 0px;
+    padding-left: 0;
   }
 
   .works_p {
     max-width: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .works_p img {
@@ -388,10 +405,11 @@ small {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   .works_p p {
-    margin-bottom: 30px;
+    margin-bottom: 0;
     font-size: 12px;
     line-height: 1.3;
   }
@@ -439,13 +457,13 @@ small {
   /*skill設定*/
 
   .skill {
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 80px;
     height: 100vh;
   }
 
   .skill_origin {
-    margin-left: 0;
+    padding-left: 0;
     margin-bottom: 30px;
   }
 
@@ -469,6 +487,16 @@ small {
 
   .contact p {
     padding-left: 30px;
+  }
+  
+  #pagetop {
+    text-align: end;
+    padding-right: 3%;
+  }
+
+  .top {
+    width: 38.4px;
+    height: 51.2px;
   }
 }
 
